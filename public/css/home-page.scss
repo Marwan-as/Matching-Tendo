@@ -1,0 +1,305 @@
+@font-face {
+    font-family: "Rox";
+    src: url(../fonts/Roxborough/OTF/RoxboroughCF-Regular.otf);
+}
+
+:root {
+    --primaryColor: #1d3557;
+    --textColor: #707070;
+}
+
+* {
+    // display: ;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    color: var(--textColor);
+}
+
+
+
+.nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+}
+
+.header-link {
+    color: var(--primaryColor);
+    text-align: end;
+
+    text-decoration: none;
+    margin: 1em;
+    width: 4em;
+    
+    font-size: 1.5rem;
+
+    &:hover{
+        font-weight: 700;
+    }
+
+}
+
+.nav-login {
+    width: 100%;
+    text-align: end;
+    display: flex;
+}
+
+
+.tendo-logo-new {
+    text-align: center;
+    color: var(--primaryColor);
+    font-family: "Rox";
+    margin: 0 auto;
+    width: 100%;
+
+
+}
+
+
+.matching-outfits-cont {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+
+}
+
+
+.left-section {
+    background-color: #1d355724;
+    width: 49%;
+    height:90vh;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    // transform: translateX(-100%);
+    animation: slidingRight 600ms 500ms forwards;
+}
+
+ul {
+    list-style: none;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // border-bottom: 1px solid var(--textColor);
+
+    li {
+        margin: .5em;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 700;
+
+        }
+    }
+}
+
+.items-to-select {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow: auto;
+
+    li {
+        margin: .5em;
+        cursor: pointer;
+
+        img {
+            width: 8em;
+            height: 11em;
+            aspect-ratio: 9 /16;
+            object-fit: cover;
+        }
+    }
+}
+
+.right-section {
+    background-color: #1d355724;
+    width: 49%;
+    height: 90vh;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    // transform: translateX(100%);
+    animation: slidingLeft 600ms 500ms forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-image{
+    width:70%;
+    margin: 0;
+    // height: ;
+    img{
+        width: 100%;
+        // height: ;
+        object-fit: cover;
+    }
+}
+
+.bottom-image{
+    width: 60%;
+    margin: 0;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.bottom-items{
+    transform: translateX(-100%);
+    display: none;
+    opacity: 0;
+}
+.close-items-top{
+    transform: translateX(-100%);
+    display: none;
+    opacity: 0;
+}
+
+
+.open-items-top{
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    animation-name: appear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+.open-items-bottom{
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    animation-name: appear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+
+
+
+
+
+.btn{
+    width: 100%;
+    text-align: center;
+}
+
+.submit-btn{
+    text-align: center;
+    margin: 3em auto;
+    padding: 1em;
+    color: white;
+    background-color: var(--primaryColor);
+    width: 10em;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes slidingRight{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidingLeft{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+@media only screen and (max-width:450px){
+   *{
+    margin: 0;
+   }
+   
+    .left-section{
+            .items-to-select{
+            padding: 0;
+            margin: 0;
+            li{
+                padding: 0;
+            }
+        }
+    }   
+
+    .header-link{
+        width: 3em;
+    }
+}
+
+@media only screen and (min-width:650px){
+    .top-image{
+        width:50%;
+    }
+    
+    .bottom-image{
+        width: 40%;
+    }
+}
+
+
+
+@media only screen and (min-width:900px){
+    .top-image{
+        width:40%;
+    }
+    
+    .bottom-image{
+        width: 30%;
+    }
+}
+@media only screen and (min-width:1100px){
+    .top-image{
+        width:30%;
+    }
+    
+    .bottom-image{
+        width: 25%;
+    }
+
+    .right-section{
+        height: 100vh;
+        
+    }
+    .left-section{
+        height: 100vh;
+
+    }
+}

@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Rox";
+  src: url(../fonts/Roxborough/OTF/RoxboroughCF-Regular.otf);
+}
+:root {
+  --primaryColor: #1d3557;
+  --textColor: #707070;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: var(--textColor);
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  margin-bottom: 1em;
+  background-color: white;
+  border-bottom: 1px solid var(--textColor);
+}
+
+.height-div {
+  height: 4em;
+}
+
+.tendo-logo {
+  margin: 0 1em;
+}
+.tendo-logo a {
+  text-decoration: none;
+  font-family: "Rox";
+  font-size: 2rem;
+  color: var(--primaryColor);
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+  margin: 0 1em;
+}
+.nav-link a:hover {
+  font-weight: 700;
+}
+
+#myTable {
+  margin-top: 4em;
+}
+
+.view-outfit {
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.view-cont {
+  width: 100%;
+  height: 90vh;
+  padding-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.view-cont h1 {
+  font-size: 1.2rem;
+}
+
+.inner-cont {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.inner-cont .top-img {
+  width: 10em;
+  height: 15em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.inner-cont .bottom-img {
+  width: 15em;
+  height: 20em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.back-btn {
+  font-size: 2rem;
+  fill: var(--primaryColor);
+}
+.back-btn i {
+  color: var(--primaryColor);
+}
+.back-btn i:hover {
+  color: red;
+}
+
+.add-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.add-items h1 {
+  color: var(--primaryColor);
+}
+.add-items a {
+  align-self: center;
+}
+
+.btn-action {
+  padding: 1em 1em;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  align-self: center;
+  margin-left: 2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+.add-img {
+  width: 8em;
+  height: 13em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.add-new-cont {
+  width: 100%;
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-new-cont h1 {
+  color: var(--primaryColor);
+}
+.add-new-cont h2 {
+  width: 100%;
+}
+.add-new-cont form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
+  width: 100%;
+}
+.add-new-cont form select {
+  width: 20em;
+}
+.add-new-cont img {
+  width: 8em;
+  height: 10em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.item-name {
+  width: 20em;
+  border: none;
+  border-bottom: 1px solid var(--textColor);
+  padding: 0.5em 1em;
+}
+.item-name:focus {
+  outline: none;
+}
+
+.center-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+}
+
+.inline-form {
+  display: inline;
+}
+
+.td-a a {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-decoration: none;
+}/*# sourceMappingURL=dashboard.css.map */
